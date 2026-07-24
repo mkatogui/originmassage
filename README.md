@@ -43,24 +43,24 @@ update **both** files.
 
 The platform supports iframe-embedding public storefront pages
 (`?embed=1` hides its header/footer) — full guide in the platform repo,
-`booking_platform/docs/embedding.md`. The booking section of both pages
-contains a ready, commented-out iframe + button. To activate:
+`booking_platform/docs/embedding.md`.
 
-1. **Platform side** (two blockers as of 2026-07-25):
-   - The deployed allowlist has a typo: `EMBED_ALLOWED_ORIGINS` must be
-     `https://originmassage.es` (production currently allows
-     `originmassages.es`, which is not this site's domain).
-   - Origin Massage's storefront doesn't exist yet — no slug on
-     cita.online resolves. Onboard the salon and note its real slug.
-2. **This site**: search both `index.html` and `en/index.html` for
-   `SLUG`, replace with the real storefront slug, and uncomment the
-   iframe block and the "Reservar online" / "Book online" button.
-3. Optionally point the hero and header booking CTAs at the same page.
+**Site side: ACTIVE.** Both pages embed
+`https://cita.online/origin-massage/booking?embed=1` in the booking
+section, plus a "Reservar online / Book online" button to the full page.
+
+**Platform side: two blockers remain (as of 2026-07-25)** — until both
+are fixed, the embed shows a connection-refused box and the button 404s:
+
+1. The deployed allowlist has a typo: set
+   `EMBED_ALLOWED_ORIGINS=https://originmassage.es` in Coolify and
+   redeploy (production currently allows `originmassages.es`).
+2. Onboard the salon so the `origin-massage` slug exists. If the real
+   slug differs, update it in both `index.html` and `en/index.html`.
 
 Caveat: if a Stripe deposit is required, card entry redirects out of the
-iframe to Stripe and back — expected behavior.
-
-Until then, WhatsApp and Instagram remain the live booking CTAs.
+iframe to Stripe and back — expected behavior. WhatsApp and Instagram
+remain available as booking channels alongside the embed.
 
 ## Content still to confirm with the owners
 
