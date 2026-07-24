@@ -83,7 +83,7 @@ header {
   display: flex; align-items: center; gap: 1.2rem;
 }
 .brand { display: flex; align-items: center; gap: .6rem; font-family: var(--serif); font-size: 1.35rem; color: var(--ink); }
-.brand svg { width: 32px; height: 32px; flex-shrink: 0; }
+.brand svg, .brand img { width: 32px; height: 32px; flex-shrink: 0; }
 .nav-links { display: flex; gap: 1.4rem; margin-left: auto; align-items: center; }
 .nav-links > a { color: var(--ink-soft); font-size: .92rem; letter-spacing: .05em; }
 .nav-links > a:hover { color: var(--gold); }

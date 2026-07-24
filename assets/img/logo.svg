@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">
+  <defs>
+    <linearGradient id="gold" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#f2d47c"/>
+      <stop offset=".35" stop-color="#d4a437"/>
+      <stop offset=".65" stop-color="#b8860b"/>
+      <stop offset="1" stop-color="#e8c05a"/>
+    </linearGradient>
+    <linearGradient id="goldLight" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#f9e7ae"/>
+      <stop offset=".55" stop-color="#e3b95a"/>
+      <stop offset="1" stop-color="#c9942a"/>
+    </linearGradient>
+  </defs>
+
+  <!-- white disc -->
+  <circle cx="100" cy="100" r="98" fill="#fffdf9"/>
+  <!-- outer ring -->
+  <circle cx="100" cy="100" r="91" fill="none" stroke="url(#gold)" stroke-width="6"/>
+  <!-- inner circle (behind hand) -->
+  <circle cx="100" cy="112" r="50" fill="none" stroke="url(#gold)" stroke-width="5"/>
+
+  <!-- thumb (drawn first so the palm overlaps the junction) -->
+  <path fill="#fffdf9" stroke="url(#gold)" stroke-width="5.5" stroke-linejoin="round"
+    d="M68,72 C51,80 41,100 43,121 A8.5,8.5 0 0 0 60,122 C59,106 64,93 76,86 Z"/>
+  <!-- hand: hollow outline, four fingers, rounded wrist -->
+  <path fill="#fffdf9" stroke="url(#gold)" stroke-width="5.5" stroke-linejoin="round"
+    d="M62,112
+       L62,64 A8.5,8.5 0 0 1 79,64 L79,88
+       A1.5,1.5 0 0 0 82,88 L82,48 A8.5,8.5 0 0 1 99,48 L99,88
+       A1.5,1.5 0 0 0 102,88 L102,48 A8.5,8.5 0 0 1 119,48 L119,88
+       A1.5,1.5 0 0 0 122,88 L122,64 A8.5,8.5 0 0 1 139,64 L139,112
+       A38.5,38.5 0 0 1 62,112 Z"/>
+
+  <!-- frangipani flower: five pinwheel petals -->
+  <g transform="translate(100,126)">
+    <g fill="url(#goldLight)" stroke="#b8860b" stroke-width="2.5" stroke-linejoin="round">
+      <path d="M0,-3 C-11,-8 -13,-20 -6,-27 C0,-32 10,-29 11,-19 C12,-10 8,-5 0,-3 Z"/>
+      <path d="M0,-3 C-11,-8 -13,-20 -6,-27 C0,-32 10,-29 11,-19 C12,-10 8,-5 0,-3 Z" transform="rotate(72)"/>
+      <path d="M0,-3 C-11,-8 -13,-20 -6,-27 C0,-32 10,-29 11,-19 C12,-10 8,-5 0,-3 Z" transform="rotate(144)"/>
+      <path d="M0,-3 C-11,-8 -13,-20 -6,-27 C0,-32 10,-29 11,-19 C12,-10 8,-5 0,-3 Z" transform="rotate(216)"/>
+      <path d="M0,-3 C-11,-8 -13,-20 -6,-27 C0,-32 10,-29 11,-19 C12,-10 8,-5 0,-3 Z" transform="rotate(288)"/>
+    </g>
+    <circle r="4.5" fill="url(#gold)"/>
+  </g>
+</svg>
