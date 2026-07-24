@@ -267,24 +267,3 @@ footer {
 footer .brand { justify-content: center; margin-bottom: .6rem; }
 footer .foot-links { margin-bottom: .8rem; }
 footer .foot-links a { margin: 0 .7rem; }
-
-/* ---------- sticky WhatsApp bubble ---------- */
-.wa-fab { position: fixed; right: 1.2rem; bottom: 1.2rem; z-index: 200; text-align: right; }
-.wa-fab-btn {
-  width: 58px; height: 58px; border-radius: 50%; border: 0; cursor: pointer;
-  background: #25d366; color: #fff; font-size: 1.7rem; line-height: 1;
-  box-shadow: 0 4px 16px rgba(0, 0, 0, .22);
-  display: flex; align-items: center; justify-content: center;
-  transition: transform .2s ease;
-}
-.wa-fab-btn:hover { transform: scale(1.07); }
-.wa-menu {
-  display: none; margin-bottom: .7rem; flex-direction: column; gap: .5rem; align-items: flex-end;
-}
-.wa-menu.open { display: flex; }
-.wa-menu a {
-  background: var(--white); color: var(--ink); border: 1px solid var(--gold-pale);
-  border-radius: 999px; padding: .55rem 1.2rem; font-size: .88rem;
-  box-shadow: 0 3px 12px rgba(0, 0, 0, .12); white-space: nowrap;
-}
-.wa-menu a:hover { color: var(--gold); }

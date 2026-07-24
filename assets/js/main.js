@@ -1,4 +1,4 @@
-// Origin Massage — progressive enhancements (menu, scroll reveal, WhatsApp bubble)
+// Origin Massage — progressive enhancements (menu, scroll reveal)
 
 document.documentElement.classList.add('js');
 
@@ -32,20 +32,4 @@ if ('IntersectionObserver' in window) {
   revealEls.forEach(function (el) { io.observe(el); });
 } else {
   revealEls.forEach(function (el) { el.classList.add('in-view'); });
-}
-
-// WhatsApp bubble
-var waBtn = document.getElementById('wa-btn');
-var waMenu = document.getElementById('wa-menu');
-if (waBtn && waMenu) {
-  waBtn.addEventListener('click', function () {
-    var open = waMenu.classList.toggle('open');
-    waBtn.setAttribute('aria-expanded', String(open));
-  });
-  document.addEventListener('click', function (e) {
-    if (!e.target.closest('.wa-fab')) {
-      waMenu.classList.remove('open');
-      waBtn.setAttribute('aria-expanded', 'false');
-    }
-  });
 }
