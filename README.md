@@ -39,22 +39,26 @@ Spanish lives at `/`, English at `/en/` — separate pages (best for SEO),
 linked via the ES/EN switch in the header. When editing copy, remember to
 update **both** files.
 
-## Booking engine (cita.online)
+## Booking engine (cita.online / Calens)
 
-The studio will get a booking link on **cita.online** (Calens — beauty &
-wellness booking platform). The site is pre-wired for it:
+The platform supports iframe-embedding public storefront pages
+(`?embed=1` hides its header/footer) — full guide in the platform repo,
+`booking_platform/docs/embedding.md`. The booking section of both pages
+contains a ready, commented-out iframe + button. To activate:
 
-1. When the link arrives, search both `index.html` and `en/index.html`
-   for `BOOKING_URL`.
-2. Replace `BOOKING_URL` with the real link and uncomment the
-   "Reservar online" / "Book online" button (the surrounding comment
-   explains it in place).
-3. Optionally make it the main CTA: point the hero's "Reservar cita" /
-   "Book an appointment" button and the header's "Reservar" / "Book now"
-   button at the same link instead of the `#reservar` / `#book` anchor.
-4. If cita.online offers an embeddable widget, it could replace the
-   booking section entirely — check their integration options once the
-   account exists.
+1. **Platform side** (two blockers as of 2026-07-25):
+   - The deployed allowlist has a typo: `EMBED_ALLOWED_ORIGINS` must be
+     `https://originmassage.es` (production currently allows
+     `originmassages.es`, which is not this site's domain).
+   - Origin Massage's storefront doesn't exist yet — no slug on
+     cita.online resolves. Onboard the salon and note its real slug.
+2. **This site**: search both `index.html` and `en/index.html` for
+   `SLUG`, replace with the real storefront slug, and uncomment the
+   iframe block and the "Reservar online" / "Book online" button.
+3. Optionally point the hero and header booking CTAs at the same page.
+
+Caveat: if a Stripe deposit is required, card entry redirects out of the
+iframe to Stripe and back — expected behavior.
 
 Until then, WhatsApp and Instagram remain the live booking CTAs.
 

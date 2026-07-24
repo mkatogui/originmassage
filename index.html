@@ -284,14 +284,24 @@
       <h2 class="section-title">Reserva tu momento</h2>
       <p>Escríbenos por WhatsApp o Instagram y encontraremos el mejor momento para ti. Indica el tratamiento que te interesa y tu disponibilidad.</p>
       <div class="hero-ctas">
-        <!-- TODO: cuando el estudio reciba su enlace de cita.online, sustituir
-             BOOKING_URL por el enlace real y descomentar este botón (también en en/index.html):
-        <a class="btn btn-gold" href="BOOKING_URL" target="_blank" rel="noopener">Reservar online</a>
+        <!-- TODO: cuando el estudio tenga su página en cita.online, sustituir SLUG
+             por el nombre real del establecimiento y descomentar el iframe de abajo
+             y este botón (también en en/index.html). Requiere que cita.online tenga
+             EMBED_ALLOWED_ORIGINS=https://originmassage.es (sin "s" final en massage).
+        <a class="btn btn-gold" href="https://cita.online/SLUG/booking" target="_blank" rel="noopener">Reservar online</a>
         -->
         <a class="btn btn-solid" href="https://wa.me/34670590297?text=Hola%2C%20me%20gustar%C3%ADa%20reservar%20un%20masaje%20corporal." target="_blank" rel="noopener">WhatsApp · Masaje corporal</a>
         <a class="btn btn-solid" href="https://wa.me/34672350047?text=Hola%2C%20me%20gustar%C3%ADa%20reservar%20un%20tratamiento%20facial." target="_blank" rel="noopener">WhatsApp · Facial</a>
         <a class="btn btn-line" href="https://www.instagram.com/originmassage/" target="_blank" rel="noopener">Instagram · @originmassage</a>
       </div>
+      <!-- TODO: reserva online integrada (cita.online). Sustituir SLUG y descomentar:
+      <div style="max-width:820px;margin:2.5rem auto 0;border-radius:16px;overflow:hidden;background:#fffdf9">
+        <iframe src="https://cita.online/SLUG/booking?embed=1"
+                title="Reservar cita online"
+                style="width:100%;min-height:760px;border:0"
+                loading="lazy"></iframe>
+      </div>
+      -->
     </div>
   </section>
 
