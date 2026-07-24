@@ -16,6 +16,15 @@ assets/fonts/         self-hosted variable fonts (woff2, latin subset)
 No build step, no external requests except the Google Maps embed —
 fonts are self-hosted (GDPR-friendly, ~88 KB total).
 
+## Live site
+
+**https://originmassage.es/** (Spanish) · **https://originmassage.es/en/** (English)
+
+Hosted on the studio's own hosting (nginx, Hostinger IP), served from this
+repository (https://github.com/mkatogui/originmassage). Canonical + hreflang
+tags, `robots.txt`, and `sitemap.xml` all point at `originmassage.es`.
+After content changes: commit, push, and sync the hosting with the repo.
+
 ## Preview locally
 
 Open `index.html` in a browser, or serve the folder:
@@ -23,19 +32,6 @@ Open `index.html` in a browser, or serve the folder:
 ```
 npx serve .
 ```
-
-## Deploy (free options)
-
-- **Netlify** — drag-and-drop the folder at https://app.netlify.com/drop
-- **Vercel** — `npx vercel` in this folder
-- **GitHub Pages** — push to a repo, enable Pages on the main branch
-
-## After choosing the final domain
-
-Both HTML files contain a commented-out block near the top of `<head>` with
-`canonical` and `hreflang` tags. Uncomment them and replace `DOMINIO.es` /
-`DOMAIN.es` with the real domain — this tells Google which language page to
-show to which searcher.
 
 ## Language handling
 
